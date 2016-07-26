@@ -43,7 +43,7 @@ Usage:
 </form>
 ```
 
-Add extra field in array: 'extra' => array('wrapper' => 'col-sm-6');
-You can edit custom field for you project
-
-if you have any ideas ,mail to: 858785716@qq.com 
++ Add extra field in array: 'extra' => array('wrapper' => 'col-sm-6');
++ You can edit custom field for you project
++ 
++ if you have any ideas ,please mail to 858785716@qq.com 
