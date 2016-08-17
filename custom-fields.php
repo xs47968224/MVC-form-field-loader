@@ -85,7 +85,7 @@ foreach ($edit_fields as $key => $field) {
                     <!--end input-->
                     <?php if (isset($item[$key]) && $item[$key] != "") { ?>
                         <a href="<?php echo site_url($upload_path . $item[$key]); ?>" target="_blank"><img src="<?php echo site_url($upload_path . $item[$key]); ?>" width="200"></a>
-                        <!-- <a href="<?php echo site_url($module_url . 'delete_image/' . $item['id'] .'/'. $field['extra']['link_argument']); ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a> -->
+                        <a href="<?php echo site_url($module_url . 'delete_image/' . $item['id'] .'/'. $field['extra']['link_argument']); ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a>
                     <?php } ?>
 
                     <!--start notes-->
@@ -201,8 +201,8 @@ foreach ($edit_fields as $key => $field) {
                     <!--end label-->
 
                     <textarea
-                        class="form-control"
-                        id="ckeditor-<?php echo $key;?>"
+                        id="<?php echo isset($field['id']) ? $field['id'] : '';?>"
+                        class="form-control <?php echo isset($field['class']) ? $field['class'] : '';?>"
                         name="<?php echo $key;?>"
                         <?php echo (isset($field['disabled']) && $field['disabled']) ? 'disabled="disabled"' : '';?>>
 
